@@ -11,6 +11,7 @@ public class DecimalToBinary {
         System.out.println(decimalToBinary(43));    // Expected return = 101011
     }
 
+    // Credit for this method goes to Dr. Irakliotis (https://github.com/lgreco)
     public static int decimalToBinary(int n) {
         int bin = 0;
         int power = 1;
