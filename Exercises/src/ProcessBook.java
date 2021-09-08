@@ -5,16 +5,16 @@ import java.util.Scanner;
 
 public class ProcessBook {
 
-    public static void main(String[] args) {
-        findPalindromes("https://www.gutenberg.org/cache/epub/66203/pg66203.txt");
-        reportResults();
-    }
-
     static int wordsRead = 0;
     static int palindromesFoundWithForLoop  = 0;
     static int palindromesFoundWithWhileLoop = 0;
     static int equalityOperatorUsageWithForLoop = 0;
     static int equalityOperatorUsageWithWhileLoop = 0;
+
+    public static void main(String[] args) {
+        findPalindromes("https://www.gutenberg.org/cache/epub/66203/pg66203.txt");
+        reportResults();
+    }
 
     /**
      * Reads the content of a web page into a Scanner object
