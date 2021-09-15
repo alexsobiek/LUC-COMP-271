@@ -1,3 +1,6 @@
+package palindrome;
+
+import arraylist.ArrayList271;
 
 import java.io.IOException;
 import java.net.URL;
@@ -5,11 +8,13 @@ import java.util.Scanner;
 
 public class ProcessBook {
 
-    static int wordsRead = 0;
-    static int palindromesFoundWithForLoop  = 0;
-    static int palindromesFoundWithWhileLoop = 0;
-    static int equalityOperatorUsageWithForLoop = 0;
-    static int equalityOperatorUsageWithWhileLoop = 0;
+    private static int wordsRead = 0;
+    private static int palindromesFoundWithForLoop = 0;
+    private static int palindromesFoundWithWhileLoop = 0;
+    private static int equalityOperatorUsageWithForLoop = 0;
+    private static int equalityOperatorUsageWithWhileLoop = 0;
+
+    private static final ArrayList271<String> palindromes = new ArrayList271<>(100);
 
     public static void main(String[] args) {
         findPalindromes("https://www.gutenberg.org/cache/epub/66203/pg66203.txt");
@@ -48,6 +53,9 @@ public class ProcessBook {
             if (forLoop.isPalindrome()) palindromesFoundWithWhileLoop++;
             equalityOperatorUsageWithWhileLoop += whileLoop.getEqualityUsage();
             wordsRead++;
+
+            palindromes.add(next);
+
         }
     }
 
