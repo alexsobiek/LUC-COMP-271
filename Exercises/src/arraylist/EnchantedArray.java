@@ -1,4 +1,4 @@
-import java.util.Objects;
+package arraylist;
 
 public class EnchantedArray {
     private String[] a; // Underlying array of the class
@@ -59,6 +59,14 @@ public class EnchantedArray {
             i++;
         }
         return result;
+    }
+
+    /**
+     * Adds element to the array if it does not exist already
+     * @param string String to add
+     */
+    public void addUnique(String string) {
+        if (!contains(string)) add(string);
     }
 
     /**
