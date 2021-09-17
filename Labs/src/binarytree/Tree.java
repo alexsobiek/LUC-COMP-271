@@ -34,6 +34,20 @@ public class Tree {
             }
         }
 
+    /**
+     * Returns the matching node containing the content if it exists
+     * @param content String
+     * @return Node
+     */
+    public Node get(String content) {
+        boolean contains = false;
+        Node node = root;
+        while(node != null && !contains) {
+            contains = content.compareTo(node.getContent()) == 0;
+            if (!contains) node = node.compare(content);
+        }
+        return node;
+    }
 
     }
 }
