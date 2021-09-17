@@ -41,6 +41,7 @@ public class Tree {
                 }
             }
         }
+    }
 
     /**
      * Returns the matching node containing the content if it exists
