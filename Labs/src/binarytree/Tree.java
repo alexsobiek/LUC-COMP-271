@@ -49,5 +49,12 @@ public class Tree {
         return node;
     }
 
+    /**
+     * Returns whether the content String exists in the tree or not.
+     * @param content Content to search for
+     * @return boolean
+     */
+    public boolean contains(String content) {
+        return get(content) != null;
     }
 }
