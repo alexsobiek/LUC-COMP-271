@@ -4,6 +4,7 @@ public class Node {
     private final String content;
     private Node right;
     private Node left;
+    private int occurrences;
 
     /**
      * Constructor
@@ -13,7 +14,7 @@ public class Node {
         this.content = content;
         this.right = null;
         this.left = null;
-        occurances = 1;
+        occurrences = 1;
     }
 
     /**
@@ -54,5 +55,32 @@ public class Node {
      */
     public void setLeft(Node left) {
         this.left = left;
+    }
+
+    /**
+     * Returns the amount of times this node has been stored in the tree
+     * @return int
+     */
+    public int getOccurrences() {
+        return occurrences;
+    }
+
+    /**
+     * Increments the occurrences by 1
+     */
+    public void addOccurrence() {
+        occurrences++;
+    }
+
+    /**
+     * Compares the given content String to the left and right nodes and returns the next one in the sequence.
+     * @param content String to compare to
+     * @return Node
+     */
+    public Node compare(String content) {
+        Node node = null;
+        if (this.content.compareTo(content) < 0 && right != null) node = right;
+        else if (this.content.compareTo(content) > 0 && left != null) node = left;
+        return node;
     }
 }
