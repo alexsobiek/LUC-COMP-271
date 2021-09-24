@@ -66,4 +66,12 @@ public class Tree {
     public boolean contains(String content) {
         return get(content) != null;
     }
+
+    /**
+     * Returns the amount of nodes in the class
+     * @return Integer
+     */
+    public int getNodeCount() {
+        return nodeCount;
+    }
 }
