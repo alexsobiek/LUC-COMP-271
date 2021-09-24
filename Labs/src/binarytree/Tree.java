@@ -52,7 +52,7 @@ public class Tree {
         boolean contains = false;
         Node node = root;
         while(node != null && !contains) {
-            contains = content.compareTo(node.getContent()) == 0;
+            contains = content.compareTo(node.getContent()) == 0; // if the content is equal, contains becomes true
             if (!contains) node = node.compare(content);
         }
         return node;
