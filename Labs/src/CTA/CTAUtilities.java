@@ -27,9 +27,9 @@ public class CTAUtilities {
      * @param location String from CSV location
      * @return double[]
      */
-    private static double[] parseLocation(String location) {
+    private static float[] parseLocation(String location) {
         String[] parts = location.replaceAll("[^\\d.,-]*", "").split(",");
-        return new double[]{Double.parseDouble(parts[0]), Double.parseDouble(parts[1])};
+        return new float[]{Float.parseFloat(parts[0]), Float.parseFloat(parts[1])};
     }
 
     /**
@@ -44,8 +44,8 @@ public class CTAUtilities {
         while (s.hasNextLine()) {
             // Splits by all commas except those with trailing whitespace
             String[] entry = s.nextLine().split("(,(?=\\S))");
-            double[] location = parseLocation(entry[16]); // Returns double[] with longitude and latitude
-            station.add(new CTAStation(entry[2], location[0], location[1]));
+            float[] location = parseLocation(entry[16]); // Returns double[] with longitude and latitude
+            station.add(new CTAStation(entry[3], location[0], location[1]));
         }
         return station;
     } // method loadStation;

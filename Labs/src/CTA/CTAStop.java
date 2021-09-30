@@ -19,7 +19,7 @@ public class CTAStop extends CTALocation {
      * @param longitude
      * @param latitude
      */
-    public CTAStop(String name, double longitude, double latitude) {
+    public CTAStop(String name, float longitude, float latitude) {
         super(name, longitude, latitude);
     }
 }

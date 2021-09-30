@@ -24,7 +24,7 @@ public class CTAStation extends CTALocation {
      * @param longitude
      * @param latitude
      */
-    public CTAStation(String name, double longitude, double latitude) {
+    public CTAStation(String name, float longitude, float latitude) {
         super(name, longitude, latitude);
     }
 }

@@ -18,9 +18,9 @@ public class CTALocation implements Comparable<CTALocation> {
     /** The address of the location, e.g. "15 West 95th Street". Eventually we need an Address object here. */
     private String address;
 
-    private final double longitude;
+    private final float longitude;
 
-    private final double latitude;
+    private final float latitude;
 
     /** Hashtag for social media use */
     private String hashTag;
@@ -30,7 +30,7 @@ public class CTALocation implements Comparable<CTALocation> {
      *
      * @param name String with name of a location.
      */
-    public CTALocation(String name, double longitude, double latitude) {
+    public CTALocation(String name, float longitude, float latitude) {
         this.name = name;
         this.longitude = longitude;
         this.latitude = latitude;
