@@ -12,14 +12,16 @@ public class CTAStop extends CTALocation {
     /** What is the stop's SMS number for bus arrival info? */
     private String smsInfo;
 
+
     /**
-     * Basic constructor. It assigns a name to a location and sets up a hashtag for it as well.
+     * Basic constructor.
      *
-     * @param name      String with name of a location.
-     * @param longitude
-     * @param latitude
+     * Passes a station name to the superclass constructor, leaves everything else (except hashTag) to mutators for
+     * assignment.
+     *
+     * @param name String with the name of the station we are creating.
      */
-    public CTAStop(String name, float longitude, float latitude) {
-        super(name, longitude, latitude);
-    }
+    public CTAStop(String name) {
+        super(name);
+    } // constructor CTAStop
 }

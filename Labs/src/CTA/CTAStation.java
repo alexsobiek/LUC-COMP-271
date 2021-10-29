@@ -17,14 +17,45 @@ public class CTAStation extends CTALocation {
     /** Is the station accessible for people with disabilities? */
     private boolean isAccessible;
 
+    /** In the direction of travel, what is the next station? */
+    private CTAStation next;
+
     /**
-     * Basic constructor. It assigns a name to a location and sets up a hashtag for it as well.
+     * Basic constructor.
      *
-     * @param name      String with name of a location.
-     * @param longitude
-     * @param latitude
+     * Passes a station name to the superclass constructor, leaves everything else (except hashTag) to mutators for
+     * assignment.
+     *
+     * @param name String with the name of the station we are creating.
      */
-    public CTAStation(String name, float longitude, float latitude) {
-        super(name, longitude, latitude);
+    public CTAStation(String name) {
+        super(name); // Hello super() call
+        this.next = null;
+    } // constructor CTAStation
+
+
+    /**
+     * Constructor with name and geographic coordinates.
+     *
+     * This constructor is used when we are scanning data from the Chicago Data Portal
+     *
+     * @param name String with name of station
+     * @param latitude double latitude of station
+     * @param longitude double longitude of station
+     */
+    public CTAStation(String name, double latitude, double longitude) {
+        super(name, latitude, longitude);
+    } // constructor CTAStation
+
+    public CTAStation getNext() {
+        return next;
+    }
+
+    public void setNext(CTAStation next) {
+        this.next = next;
+    }
+
+    public boolean hasNext() {
+        return this.next != null;
     }
 }
