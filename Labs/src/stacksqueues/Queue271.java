@@ -49,7 +49,7 @@ public class Queue271<E> {
         private final E object;
         private Node<E> next;
 
-        public Node(E object) {
+        protected Node(E object) {
             this.object = object;
         }
 
