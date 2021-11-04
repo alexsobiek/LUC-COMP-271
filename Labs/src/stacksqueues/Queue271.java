@@ -6,7 +6,7 @@ public class Queue271<E> {
 
     public Queue271() { }
 
-    public void enqueue(E object) {
+    public void push(E object) {
         Node<E> n = new Node<>(object);
         if (head == null) {
             head = n;
@@ -20,7 +20,7 @@ public class Queue271<E> {
 
     }
 
-    public E dequeue() {
+    public E pop() {
         E removed = head.getObject();
         if (head.hasNext()) head = head.getNext();
         else head = null;
