@@ -70,5 +70,4 @@ public class Queue271<E> {
         }
 
     }
-
 }
